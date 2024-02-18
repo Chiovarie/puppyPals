@@ -7,6 +7,7 @@ function App() {
   console.log(puppies)
   return (
     <>
+    {/* on click must be an anonymous function or else it will cause an infinite loop*/}
       {puppies.map(puppy =><p key = {puppy.id} onClick={()=>setFeatPup(puppy)}> {puppy.name}</p>)}
       {featPup ?
       <div className="singlePuppyView">
